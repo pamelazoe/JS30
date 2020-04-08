@@ -15,7 +15,7 @@ const letters = [
 const x = letters
   .map((l) => {
     return `<section class="key" data-key=Key${l.keyboardInput}>
-      <kbd>${l.keyboardInput}</kbd>
+      <h1>${l.keyboardInput}</h1>
       <span class="sound">${l.sound.toUpperCase()}</span>
       </section>`;
   })

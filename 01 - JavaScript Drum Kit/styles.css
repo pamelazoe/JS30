@@ -2,21 +2,23 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    background: url(./yannis-papanastasopoulos-yWF2LLan-_o-unsplash.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  background-color: #292929;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Gotham Pro Bold";
+
 }
 
 /* Remove default padding */
 ul[class],
 ol[class] {
-    padding: 0;
+  padding: 0;
 }
 
 /* Remove default margin */
@@ -34,37 +36,39 @@ figcaption,
 blockquote,
 dl,
 dd {
-    margin: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
 }
 
 /* Set core body defaults */
 body {
-    min-height: 100vh;
-    scroll-behavior: smooth;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
+  height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {
-    list-style: none;
+  list-style: none;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-    text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 /* Natural flow and rhythm in articles by default */
 article>*+* {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -72,36 +76,96 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
+}
+
+@font-face {
+  font-family: "Gotham Pro Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gotham Pro Bold"),
+    url("./gotham-pro-cufonfonts-webfont//GothaProBol.woff") format("woff");
 }
 
 .app {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+  height: 100%;
+  width: 150vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .key {
-    width: 15vh;
-    height: 15vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: solid black;
-    color: white;
-    flex-flow: column;
-    border-radius: .5rem;
-    margin: 1rem;
-    padding: 1rem .5rem;
-    transition: all .07s ease;
-    text-align: center;
-    text-shadow: 0 0 .5rem black;
+  height: 25vh;
+  width: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  margin: 1rem;
+  padding: 1rem 0.5rem;
+  transition: all 0.07s ease;
+  text-align: center;
+  background-color: #292929;
+  box-shadow: 3px 3px 5px #1b1a1a, -3px -3px 5px #2b2b2b;
+  border: none;
+  border-radius: 20px;
 }
 
 .playing {
-    transform: scale(1.1);
-    border-color: #ffc600;
-    box-shadow: 0 0 1rem #ffc600;
+  transform: scale(0.9);
+  background-color: #292929;
+  box-shadow: 3px 3px 5px #1b1a1a, -3px -3px 5px #2b2b2b;
+  border: none;
+  border-radius: 20px;
+}
+
+.key h1 {
+  font-size: 8vh;
+  color: rgb(70, 70, 70);
+}
+
+.playing h1 {
+  color: #5dc09f;
+  text-shadow: 0 0 2px #5dc09f, 0 0 3px #5dc09f;
+}
+
+.playing .sound {
+  color: #5dc09f;
+  text-shadow: 0 0 2px #5dc09f, 0 0 3px #5dc09f;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 2s ease-out;
+}
+
+.sound {
+  font: 2vh;
+  color: rgb(70, 70, 70);
+}
+
+.description {
+  display: flex;
+  color: rgb(153, 153, 153);
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+
+}
+
+.description h1 {
+  font-size: 2.5rem;
+  justify-content: center;
+  padding: 0.8rem;
+  margin: 0 0 2rem 0;
+}
+
+.description p {
+  font-size: 1.rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 80%;
 }

@@ -1,6 +1,6 @@
 const app = document.querySelector(".app");
 
-const letters = [
+const dataKeys = [
   { keyboardInput: "A", dataKey: "65", sound: "clap" },
   { keyboardInput: "S", dataKey: "83", sound: "hihat" },
   { keyboardInput: "D", dataKey: "68", sound: "kick" },
@@ -12,7 +12,7 @@ const letters = [
   { keyboardInput: "L", dataKey: "76", sound: "tink" },
 ];
 
-const x = letters
+const x = dataKeys
   .map((l) => {
     return `<section class="key" data-key=Key${l.keyboardInput}>
       <h1>${l.keyboardInput}</h1>
@@ -23,7 +23,7 @@ const x = letters
 
 app.insertAdjacentHTML("beforeEnd", x);
 
-const y = letters
+const y = dataKeys
   .map((s) => {
     return `<audio data-key=Key${s.keyboardInput} src="sounds/${s.sound}.wav"></audio>`;
   })
@@ -47,46 +47,3 @@ const removeTransition = (e) => {
 const keys = Array.from(document.querySelectorAll(".key"));
 keys.forEach((key) => key.addEventListener("transitionend", removeTransition));
 window.addEventListener("keydown", playSound);
-
-// const foo = () => {
-//   let x = (y = 0);
-//   x++;
-//   return x;
-// };
-// console.log(foo());
-// console.log(typeof x);
-// console.log(typeof y);
-
-// function foo1() {
-//   return {
-//     hello: "world",
-//   };
-// }
-// function foo2() {
-//   return {
-//     hello: "world",
-//   };
-// }
-// console.log(foo1());
-// console.log(foo2());
-
-// let race = () => {
-//   setTimeout(() => console.log("timeout"), 0);
-//   setImmediate(() => console.log("immediate"));
-//   process.nextTick(() => console.log("nextTick"));
-//   console.log("current event loop");
-// };
-// race();
-
-// console.log(typeof foo);
-// var foo = 22;
-
-// function foo(foo) {
-//   return foo * 2;
-// }
-
-// for (var i = 0; i < 5; i++) {
-//   setTimeout(() => {
-//     console.log(i);
-//   }, i * 1000);
-// }

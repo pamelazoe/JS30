@@ -1,6 +1,6 @@
 # JavaScript Drum Kit
-[![Foo](https://raw.githubusercontent.com/pamelazoe/JS30/01-drumkit/drumkit.png)](https://js30drumkit.netlify.com/)
+[![Foo](https://raw.githubusercontent.com/pamelazoe/JS30/02-cssclock/cssclock.png)](https://js30-cssclock.netlify.com/)
 
-**[Repository](https://github.com/pamelazoe/JS30/tree/01-drumkit/01%20-%20JavaScript%20Drum%20Kit)**
+**[Repository](https://github.com/pamelazoe/JS30/tree/02-cssclock/02%20-%20CSS%20JS%20Clock)**
 
-**[Demo](https://js30drumkit.netlify.com/)**
+**[Demo](https://js30-cssclock.netlify.com/)**

@@ -4,18 +4,18 @@
 // Some data we can work with
 
 const inventors = [
-  { first: "Albert", last: "Einstein", year: 1879, passed: 1955 },
-  { first: "Isaac", last: "Newton", year: 1643, passed: 1727 },
-  { first: "Galileo", last: "Galilei", year: 1564, passed: 1642 },
-  { first: "Marie", last: "Curie", year: 1867, passed: 1934 },
-  { first: "Johannes", last: "Kepler", year: 1571, passed: 1630 },
-  { first: "Nicolaus", last: "Copernicus", year: 1473, passed: 1543 },
-  { first: "Max", last: "Planck", year: 1858, passed: 1947 },
-  { first: "Katherine", last: "Blodgett", year: 1898, passed: 1979 },
-  { first: "Ada", last: "Lovelace", year: 1815, passed: 1852 },
-  { first: "Sarah E.", last: "Goode", year: 1855, passed: 1905 },
-  { first: "Lise", last: "Meitner", year: 1878, passed: 1968 },
-  { first: "Hanna", last: "Hammarström", year: 1829, passed: 1909 },
+  {first: "Albert",last: "Einstein",year: 1879,passed: 1955},
+  {first: "Isaac",last: "Newton",year: 1643,passed: 1727},
+  {first: "Galileo",last: "Galilei",year: 1564,passed: 1642},
+  {first: "Marie",last: "Curie",year: 1867,passed: 1934},
+  {first: "Johannes",last: "Kepler",year: 1571,passed: 1630},
+  {first: "Nicolaus",last: "Copernicus",year: 1473,passed: 1543},
+  {first: "Max",last: "Planck",year: 1858,passed: 1947},
+  {first: "Katherine",last: "Blodgett",year: 1898,passed: 1979},
+  {first: "Ada",last: "Lovelace",year: 1815,passed: 1852},
+  {first: "Sarah E.",last: "Goode",year: 1855,passed: 1905},
+  {first: "Lise",last: "Meitner",year: 1878,passed: 1968},
+  {first: "Hanna",last: "Hammarström",year: 1829,passed: 1909},
 ];
 
 const people = [
@@ -76,18 +76,18 @@ const names = inventors.map((name) => `${name.first} ${name.last}`);
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
-const oldToYoung = inventors.sort((a, b) => a.year - b.year);
+const oldToYoung = inventors.sort((a,b) => a.year - b.year);
 // console.table(oldToYoung);
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
-const years = inventors.reduce((acc, val) => {
+const years = inventors.reduce((acc,val) => {
   return acc + (val.passed - val.year);
-}, 0);
+},0);
 // console.log(years);
 
 // 5. Sort the inventors by years lived
-const yearsLived = inventors.sort((a, b) => {
+const yearsLived = inventors.sort((a,b) => {
   const sumA = a.passed - a.year;
   const sumB = b.passed - b.year;
   return sumB - sumA;
@@ -105,9 +105,9 @@ const yearsLived = inventors.sort((a, b) => {
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
-const sortPeople = people.sort((lastOne, nextOne) => {
-  const [aLast, aFirst] = lastOne.split(", ");
-  const [blast, bFirst] = nextOne.split(", ");
+const sortPeople = people.sort((lastOne,nextOne) => {
+  const [aLast,aFirst] = lastOne.split(", ");
+  const [blast,bFirst] = nextOne.split(", ");
   return nextOne > lastOne ? lastOne : nextOne;
 });
 // console.log(sortPeople);
@@ -131,12 +131,12 @@ const data = [
   "truck",
 ];
 
-const sum = data.reduce((obj, item) => {
-  if (!obj[item]) {
+const sum = data.reduce((obj,item) => {
+  if(!obj[item]) {
     obj[item] = 0;
   }
   obj[item]++;
   return obj;
-}, {});
+},{});
 
 // console.log(sum);
